@@ -1,29 +1,49 @@
 
 /* header & nav */
+/*{
+  margin:0;
+  padding: 0;
+
+}*/
 
 header {
-
+height: 15%;
+justify-content: space-around;
+display:flex;
+flex-flow: row wrap;
+align-items: flex-start;
+display: flex;
+border-bottom: 3px solid #d0a064;
+background-color: #167C80;
 }
 
 header .logo, header nav {
 
+display: flex;
+box-sizing: border-box;
 }
 
 
 .container .aboutrow {
-
+display: flex;
+flex-direction: row;
+justify-content: center;
+justify-content: space-between;
 }
 
 
 /* feature */
 
 .feature {
-
+display: flex;
+margin: 50px ; 
 }
 
 /* cta */
 
 .cta .container {
+  display: flex;
+  justify-content: space-between;
 
 }
 
@@ -31,30 +51,41 @@ header .logo, header nav {
 /* footer */
 
 footer {
+  height:15% ;
+  display:flex;
 
 }
 
 .footer-left {
+  display:flex;
+margin: 0 auto;
+justify-content: space-between;
 
+float: left;
 }
 
-.footer-left .footer-col {
+/*footer-left .footer-col {
 
-}
+}*/
 
 .footer-right {
+float:right;
 
 }
+.footer-left .footer-col {
+
+  float:left; }
 
 /* ======+++++======++++=====+++=== */
 /* ======+++++======++++=====+++=== */
 
 .container {
   width: 80vw;
-  max-width: 1000px;
-  padding: 50px;
-  box-sizing: border-box;
+  
   margin: 0px auto;
+  color: black ;
+      transition: all 0.2s;
+      text-align: center;
 }
 
 body {
@@ -63,82 +94,102 @@ body {
   font-size: 13px;
 }
 
-header {
+/*header {
   border-bottom: 3px solid #d0a064;
   background-color: #167C80;
-}
+  
+}*/
 
 .logo {
   padding: 15px;
   color: white;
   font-size: 2em;
   font-weight: bold;
+ display: inline;
 }
 
 nav ul li {
-  padding: 15px;
-}
+  padding: 10px ;
+  
+  
 
+}
+/*.navigation-right a {
+ 
+}
+*/
 .navigation a {
-  color: white;
-  transition: all 0.2s;
+  color:white;
+  transition: all 0.5s;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 0.8em;
+ display: inline-block;
+ 
+
+ 
 }
 
 .navigation li:hover a {
   color: #d0a064;
   transition: all 0.2s;
+ 
+}
+.navigation li {
+  display: inline;
 }
 
 .hero-cont {
   background-image: url('../assets/hero.jpg');
   background-size: cover;
+
   background-position: center center;
   background-color: #555555;
-  background-blend-mode: multiply;
-  padding: 2em;
+  height: 200px;
+  padding: 10px 20px 10px 20px ;
+  margin: 0 auto;
+  display: block;
+  display: flex;
+
 }
 
 .hero h2, .hero h1 {
   color: white;
   line-height: 1.4em;
   text-align: center;
+  justify-content: center;
 }
 
-.hero h2 {
-  font-size: 4em;
-  font-weight: bold;
-  padding: 1em 0;
-}
 
-.hero h1 {
-  font-size: 2em;
-  font-style: italic;
-  padding: 0.8em 0; 
-}
 
-.aboutbtn, .contactbtn {
+.hero .aboutbtn {
   display: block;
   color: #167C80;
   background-color: white;
   border-radius: 20px;
-  padding: 5px 15px;
+ align-content: center;
   text-decoration:none;
   transition: all 0.2s;
+  margin-left: 50%;
+  widows: 100px;
+  width: 95px;
+  height: 25px;
+  text-align: center;
+
 }
 
 .aboutbtn:hover, .contactbtn:hover {
-  background-color: #167C80;
-  color: white;
+ 
+ 
   transition:all 0.2s;
+ 
 }
 
 .container .top {
   padding: 1.5em 0;
+  font-style: italic;
 }
 
 .top h3 {
@@ -147,15 +198,16 @@ nav ul li {
   padding: 1em;
   font-style: italic;
 }
-
+/*
 .top p {
   font-size: 1.5em;
   line-height: 1.4em;
-}
+}*/
 
 .aboutrow {
   background-color: #d0a064;
   padding: 15px;
+  display:flex;
 }
 
 .aboutcol {
@@ -176,16 +228,19 @@ nav ul li {
 
 .feature {
   background-color: #167C80;
+  display:flex;
 }
 
 .feat-left {
   background-image: url('../assets/glacier.jpg');
   background-size:cover;
   background-position:center center;
+flex-flow: row nowrap ;
 }
 
 .feat-right {
   padding: 50px;
+  
 }
 
 .feat-right p {
@@ -195,7 +250,7 @@ nav ul li {
 
 .feat-intro {
   text-transform: uppercase;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
   font-weight: bold;
   color: #ffe5c5;
 }
@@ -214,13 +269,17 @@ nav ul li {
 footer {
   background-color: #222;
   color: #ddd;
-  padding: 50px;
-  text-align: center;
+  padding: 50px 10px 50px 180px;
+  text-align: left;
+  justify-content: space-between;
+  display: flex;
 }
 
 .footer-col {
   padding: 15px 0;
 }
+.footer-col ul li{
+  list-style: none;}
 
 footer a {
   color: #d0a064;
@@ -253,6 +312,8 @@ footer h5 {
 
 .cta .container h3 {
   font-size: 1.5em;
+  justify-content: center;
+  display: flex;
 }
 
 @media screen and (min-width: 1025px) {
@@ -260,9 +321,11 @@ footer h5 {
     font-size: 16px;
   }
 
-  footer {
-    text-align: left;
-    padding: 50px 15px 50px 200px;
-  }
+  
+  /*.nav{
+    padding-right: 40px;
+ 
+    margin-right: 5px;
+  }*/
 
 }
